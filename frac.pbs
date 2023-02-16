@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -N Fractional 
+#PBS -l mem=60GB
+#PBS -l ncpus=2
+#PBS -l walltime=8:00:00
+#PBS -m ae
+#PBS -M qlegia@unsw.edu.au
+
+cd /home/z9701564/Fractional/mittag-leffler-master
+pip3 install scipy numpy sdeint --user
+pip3 install numpy --upgrade --user
+python3 my_test3.py

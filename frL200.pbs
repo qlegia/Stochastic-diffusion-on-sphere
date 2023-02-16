@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -N frL200 
+#PBS -l mem=60GB
+#PBS -l ncpus=2
+#PBS -l walltime=4:00:00
+#PBS -m ae
+#PBS -M qlegia@unsw.edu.au
+#PBS -J 0-50
+
+cd /home/z9701564/Fractional/mittag-leffler-master
+echo “I am now working on job ${PBS_ARRAY_INDEX}”
+python3 ErrorsLtr_wRF_v2.py ${PBS_ARRAY_INDEX} 1500 200 
